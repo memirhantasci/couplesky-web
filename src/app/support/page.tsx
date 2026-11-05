@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { Mail, MessageSquare, ArrowLeft, Send, CheckCircle, Instagram, Sparkles, Clock } from 'lucide-react';
+import { Mail, MessageSquare, ArrowLeft, Send, CheckCircle, Instagram, Sparkles, Clock, MapPin, ShieldCheck } from 'lucide-react';
 
 export default function SupportPage() {
   const [lang, setLang] = useState<'tr' | 'en'>('tr');
@@ -88,6 +88,21 @@ export default function SupportPage() {
               <div className="flex items-center gap-1.5 pt-2 text-[11px] text-emerald-400">
                 <Clock className="w-3.5 h-3.5" />
                 <span>{isTr ? 'Ortalama yanıt süresi: < 12 saat' : 'Average response: < 12 hours'}</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-3xl glass-panel border border-white/10 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-300">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <h3 className="font-bold text-base text-white">{isTr ? 'Resmi Tebligat Adresi' : 'Official Office Address'}</h3>
+              <p className="text-xs text-white/60">
+                {isTr ? 'Veri Sorumlusu ve resmi posta adresi:' : 'Data Controller and legal mailing address:'}
+              </p>
+              <div className="space-y-1 pt-1 text-xs text-white/80 leading-relaxed">
+                <p className="font-semibold text-white">Necati Taşcı (CoupleSky)</p>
+                <p>Küçükbakkalköy Mah. Sümer Sok. No:8</p>
+                <p>Ataşehir / İstanbul, Türkiye</p>
               </div>
             </div>
 
