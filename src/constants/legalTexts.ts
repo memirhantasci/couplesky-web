@@ -1,6 +1,9 @@
 /**
  * CoupleSky Yasal & Mevzuat Metinleri (Web Sürümü)
  * 6698 Sayılı KVKK, GDPR, Apple App Store Review Guidelines ve Google Play Politikalarına Uygun Metinler
+ *
+ * KAYNAK: mobil uygulamadaki src/constants/legalTexts.ts. Metin değişikliği önce uygulamada yapılır, bu dosya
+ * ondan senkronize edilir (yalnızca lastUpdated biçimi ve dil işlevleri web'e özgüdür).
  */
 
 const CONTROLLER_ADDRESS_TR_TEXT = "Küçükbakkalköy Mah. Sümer Sok. No:8, Ataşehir / İstanbul";
@@ -24,7 +27,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
     id: "kvkk",
     title: "KVKK Aydınlatma Metni",
     badge: "6698 Sayılı Kanun",
-    lastUpdated: "7 Kasım 2026",
+    lastUpdated: "9 Kasım 2026",
     summary: "Kişisel verilerinizin işlenme amaçları, toplanma yöntemleri, hukuki sebepleri ve 6698 Sayılı KVKK 11. madde kapsamındaki haklarınız hakkında bilgilendirme.",
     content: [
       "1. VERİ SORUMLUSU",
@@ -35,7 +38,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
       "• Kimlik ve İletişim Bilgileri: Ad-soyad, kullanıcı adı, e-posta adresi, cinsiyet bilgisi.\n" +
       "• Çift ve İlişki Bilgileri: Eşleşme kodu (pairing code), tanışma tarihi, sevgili olma tarihi, yıldönümü tarihleri. Çift ilişkisi sona erdiğinde (partnerin hesabını silmesi gibi) tanışma ve sevgili olma tarihleri sıfırlanır; yeni bir eşleşmede yeniden girilir.\n" +
       "• Görsel ve İşitsel Kayıtlar: Ortak galeriye veya günlüklere yüklediğiniz fotoğraflar, anı görselleri ve profil avatarları.\n" +
-      "• Lokasyon (Konum) Bilgileri: Buluşma noktası seçimi ve anılarınıza isteğe bağlı eklenen GPS koordinatları ve harita pinleri.\n" +
+      "• Lokasyon (Konum) Bilgileri: Buluşma noktası seçimi ve anılarınıza isteğe bağlı eklenen GPS koordinatları ve harita pinleri. Gökyüzü posteri özelliğinde seçtiğiniz yer, tarih ve saat yalnızca cihazınızda posteri hesaplamak için kullanılır; koordinatlar saklanmaz ve sunucularımıza gönderilmez. Yer adı (ilçe/şehir düzeyinde), saat ve başlık cihazınızda tutulur, çıkış yaptığınızda silinir ve cihaz yedeğine dahil olabilir.\n" +
       "• Özel Nitelikli Kişisel Veriler (Sağlık Bilgileri): Kadın kullanıcılar ve çiftleri için döngü/regl başlangıç ve tahmin tarihleri, günlük ilaç/vitamin saatleri ve takip kayıtları.\n" +
       "• Mesajlaşma ve Anı Verileri: Zaman kilitli mektuplar, günlük notları ve ruh hali (mood) seçimleri. (Bu veriler sunucuda şifreli olarak saklanmaktadır).\n" +
       "• Müşteri İşlem ve Finansal Bilgiler: RevenueCat ve uygulama mağazası (App Store / Google Play) üzerinden sağlanan anonim işlem tokenları, abonelik durumu, paket türü ve token bakiyesi.\n" +
@@ -51,8 +54,8 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
       "• Ortak buluşma noktalarının haritada görüntülenmesi ve rota kolaylığı sunulması,\n" +
       "• İlaç saati, regl döngüsü, yıldönümü ve mektup teslim bildirimlerinin gönderilmesi,\n" +
       "• Premium abonelik haklarının tanımlanması ve tek abonelikle her iki partnerin de premium özelliklerden faydalandırılması,\n" +
-      "• Kullanılmayan, eşleşmemiş hesapların belirli süre sonunda silinmesi (saklama sınırlaması ilkesi) ve silmeden önce bildirim gönderilmesi,\n" +
-      "• Bilgi güvenliği süreçlerinin yürütülmesi ve siber saldırılara/brute-force denemelerine karşı koruma sağlanması.",
+      "• Bilgi güvenliği süreçlerinin yürütülmesi ve siber saldırılara/brute-force denemelerine karşı koruma sağlanması,\n" +
+      "• Kullanılmayan, eşleşmemiş hesapların belirli süre sonunda silinmesi (saklama sınırlaması ilkesi) ve silmeden önce bildirim gönderilmesi.",
 
       "4. KİŞİSEL VERİLERİN AKTARILDIĞI TARAFLAR",
       "Kişisel verileriniz, kanunun emrettiği istisnalar haricinde hiçbir üçüncü tarafa reklam veya ticari amaçla satılmaz. Veriler yalnızca hizmetin ifası için aşağıdaki sağlayıcılarla paylaşılır. Bu sağlayıcıların bir kısmı yurt dışında yerleşiktir; veriler bu nedenle KVKK md. 9 kapsamında yurt dışına aktarılabilir:\n" +
@@ -60,7 +63,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
       "• RevenueCat Inc.: Uygulama içi satın alma, abonelik doğrulama ve iade altyapısı,\n" +
       "• Google Cloud / Firebase, Apple (APNs) & Expo Notifications: Push bildirimlerinin cihazınıza ulaştırılması (bildirim metinleri partnerinizin paylaştığı ilaç adı, döngü durumu gibi sağlık ayrıntılarını içerebilir ve bu metinler söz konusu servislerden geçer),\n" +
       "• Google LLC (AdMob ve Google Haritalar): reklam gösterimi ve harita hizmetleri,\n" +
-      "• Apple Inc. ve Google LLC: Apple ile giriş ve Google ile giriş hizmetleri; cihaz üzerindeki adres arama (konum seçerken yazdığınız adres metni),\n" +
+      "• Apple Inc. ve Google LLC: Apple ile giriş ve Google ile giriş hizmetleri; cihaz üzerindeki adres arama ve adres çözümleme (konum seçerken yazdığınız adres metni ve haritada seçtiğiniz noktanın koordinatı),\n" +
       "• Expo (Expo Updates / EAS): Uygulama güncellemelerinin dağıtımı; güncelleme kontrolünde IP adresiniz, platform ve uygulama sürümü bilgileri,\n" +
       "• OpenStreetMap Vakfı (Nominatim): Cihazın kendi adres arama servisi sonuç vermezse yedek olarak kullanılır; yalnızca adres arama kutusuna yazdığınız metin ve IP adresiniz,\n" +
       "• Unsplash: Keşif (demo) modunda gösterilen örnek görseller; görseller yüklenirken IP adresiniz,\n" +
@@ -90,7 +93,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
       "• Giriş ve şifre sıfırlama deneme kayıtları (IP adresi dahil): en fazla 1 gün,\n" +
       "• Bildirimin tekrar gönderilmesini önleyen kayıtlar: 14 gün,\n" +
       "• Partnerinize gösterilen uygulama içi hesap bildirimleri: görüldükten 30 gün sonra,\n" +
-      "• Push bildirim tokenı: oturumunuz ve hesabınız süresince,\n" +
+      "• Push bildirim tokenı: oturumunuz ve hesabınız süresince (hesap silme talebinden sonra yalnızca silme hatırlatması için silme gününe kadar),\n" +
       "• Üçüncü taraf sağlayıcılardaki kayıtlar (ör. RevenueCat, Expo, Google): sağlayıcının kendi saklama politikalarına tabidir.",
 
       "8. KVKK'NIN 11. MADDESİ KAPSAMINDAKİ HAKLARINIZ",
@@ -112,7 +115,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
     id: "privacy",
     title: "Gizlilik Politikası",
     badge: "Privacy Policy",
-    lastUpdated: "7 Kasım 2026",
+    lastUpdated: "9 Kasım 2026",
     summary: "Uygulamamızın veri toplama, işleme, koruma prensipleri ve gizliliğinizi nasıl koruduğumuzun detayları.",
     content: [
       "1. GİRİŞ VE TAAHHÜDÜMÜZ",
@@ -121,10 +124,10 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
       "2. TOPLANAN BİLGİLER VE KULLANIM ALANLARI",
       "• Hesap Bilgileri: Kayıt sırasında belirttiğiniz ad, kullanıcı adı, e-posta adresi ve şifreniz (güvenli hash olarak).\n" +
       "• İlişki ve Anı İçeriği: Eklediğiniz fotoğraflar, anı açıklamaları, mektuplar ve takvim notları. Bu içerikler yalnızca siz ve eşleştiğiniz partneriniz tarafından görüntülenebilir. Yeni bir eşleşmede partneriniz yalnızca eşleşme anından sonra kaydedilen içerikleri görür; önceki ilişkiye ait içerikleriniz yeni partnerinize gösterilmez.\n" +
-      "• Kullanım Zamanı: Hesabınızın son kullanıldığı zaman. Yalnızca kullanılmayan, eşleşmemiş hesapları silebilmek için tutulur (Bölüm 5).\n" +
       "• Yıldız (Gökyüzü): Yıldızınıza verdiğiniz ad ve çiftinizin baş harfleri diğer kullanıcılara ve uygulamayı hesap açmadan deneyen ziyaretçilere görünür. İlk adınız yalnızca yıldız bağı kurduğunuz çiftlere ve siz Sertifika > İsimlerimiz ve Fotoğraflarımız bölümünden açıkça izin verirseniz herkese gösterilir. Profil fotoğrafınız (Premium) yalnızca aynı bölümden ayrıca izin verirseniz yıldız kartınızda herkese gösterilir; Premium sona erdiğinde ya da fotoğrafı kaldırdığınızda gösterilmez. İzinler kişi başınadır (partneriniz sizin adınıza açamaz) ve istediğiniz an kapatılabilir. Soyadınız, kullanıcı adınız ve e-posta adresiniz gösterilmez. Uygunsuz yıldız adları, isimler ve fotoğraflar uygulama içinden bildirilebilir.\n" +
       "• Döngü ve Sağlık Verileri: Regl başlangıç tarihleri ve ilaç saatleri. Bu veriler yalnızca döngü tahmini ve size zamanında hatırlatıcı bildirim göndermek için işlenir.\n" +
-      "• Konum Bilgileri: Yalnızca siz harita üzerinde bir buluşma noktası seçtiğinizde veya fotoğraflarınıza isteğe bağlı konum eklediğinizde alınır; arka planda sürekli konum takibi yapılmaz.\n" +
+      "• Konum Bilgileri: Yalnızca siz harita üzerinde bir buluşma noktası seçtiğinizde veya fotoğraflarınıza isteğe bağlı konum eklediğinizde alınır; arka planda sürekli konum takibi yapılmaz. Gökyüzü posterinde seçtiğiniz yer ve saat posteri hesaplamak için yalnızca cihazınızda işlenir; koordinatlar saklanmaz ve sunucularımıza gönderilmez, yer adı (ilçe/şehir düzeyinde), saat ve başlık cihazınızda tutulur ve çıkışta silinir. Haritada seçtiğiniz noktanın adresini bulmak için koordinat, cihazınızın adres servisine (Apple/Google) iletilir.\n" +
+      "• Kullanım Zamanı: Hesabınızın son kullanıldığı zaman. Yalnızca kullanılmayan, eşleşmemiş hesapları silebilmek için tutulur (Bölüm 5).\n" +
       "• Hata ve Güvenlik Kayıtları: Uygulama hata verdiğinde hata mesajı, teknik yığın izi, uygulama sürümü ve platform bilgisi (en fazla 30 gün); giriş denemelerini sınırlamak için IP adresi (en fazla 1 gün). İçerikleriniz bu kayıtlara yazılmaz.\n" +
       "• Üçüncü taraf hizmetler: Google AdMob (reklam), Google Haritalar (harita), Apple/Google ile giriş, Supabase (veritabanı), RevenueCat (abonelik), Expo (bildirim ve uygulama güncellemeleri), OpenStreetMap Nominatim (yedek adres arama) ve Unsplash (keşif modundaki örnek görseller). Ayrıntılar ve yurt dışı aktarım bilgisi için KVKK Aydınlatma Metni, 4. bölüm.",
 
@@ -135,7 +138,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
       "Uygulama içinde yetkisiz cihaz girişlerini tespit etmek ve brute-force saldırılarını önlemek amacıyla rastgele üretilmiş bir 'Cihaz Kimliği' (UUID) kullanılır. Bu kimlik kişisel profilinizle ilişkilendirilerek başka bir cihazdan giriş yapıldığında e-posta onayı (OTP) istememizi sağlar. Arkadaş daveti programında aynı cihazda açılmış hesaplarla ödül kazanılmasını önlemek için davet eden ve davet edilen çiftlerin cihaz kimlikleri sunucuda karşılaştırılır; bu karşılaştırma başka bir amaçla kullanılmaz.",
 
       "5. HESAP SİLME VE VERİLERİN İMHASI (GDPR & KVKK UYUMLU)",
-      "Hesabınızı istediğiniz zaman Profil > Hesap Yönetimi & Tehlike Bölgesi bölümünden silebilirsiniz. Talep 7 gün beklemeye alınır; bu süre içinde yalnızca hesabın sahibi aynı hesapla giriş yaparak talebi iptal edebilir (giriş yaptığınızda talep otomatik iptal edilir). Silme gününe 3 gün ve 1 gün kala, vazgeçebilmeniz için uygulama bildirimiyle hatırlatma gönderilir. 7 gün sonunda sizin oluşturduğunuz, yüklediğiniz veya yazdığınız her şey (kayıtlar, dosyalar, mektuplar, özel günler, harita pinleri ve yıldızınızdaki içerikler) sunuculardan kalıcı olarak silinir ve geri getirilemez. Partnerinizin hesabı silinmez ve partnerinizin kendi oluşturduğu içerikler yalnızca kendisi için saklanmaya devam eder. Ortak yıldız ve içindeki anı gezegenleri kimin oluşturduğuna bakılmaksızın silinir. Partnerinize silme talebi, silinmeye 3 gün ve 1 gün kala hatırlatma, vazgeçilmesi ve silinme durumunda uygulama içi açıklama ve bildirimle bilgi verilir. Her iki taraf da silme talebinde bulunduysa her hesap kendi 7. gününde silinir ve son hesap silindiğinde çifte ait kalan her şey de silinir.\n\n" +
+      "Hesabınızı istediğiniz zaman Profil > Hesap Yönetimi & Tehlike Bölgesi bölümünden silebilirsiniz. Talep 7 gün beklemeye alınır; bu süre içinde yalnızca hesabın sahibi aynı hesapla giriş yaparak talebi iptal edebilir (giriş yapıldığında talep otomatik iptal edilir). Silme gününe 3 gün ve 1 gün kala hatırlatma bildirimi gönderilir. 7 gün sonunda sizin oluşturduğunuz, yüklediğiniz veya yazdığınız her şey (kayıtlar, dosyalar, mektuplar, özel günler, harita pinleri ve yıldızınızdaki içerikler) sunuculardan kalıcı olarak silinir ve geri getirilemez. Partnerinizin hesabı silinmez ve partnerinizin kendi oluşturduğu içerikler yalnızca kendisi için saklanmaya devam eder. Ortak yıldız ve içindeki anı gezegenleri kimin oluşturduğuna bakılmaksızın silinir. Partnerinize silme talebi, silinmeye 3 gün ve 1 gün kala hatırlatma, vazgeçilmesi ve silinme durumunda uygulama içi açıklama ve bildirimle bilgi verilir. Her iki taraf da silme talebinde bulunduysa her hesap kendi 7. gününde silinir ve son hesap silindiğinde çifte ait kalan her şey de silinir.\n\n" +
       "Kullanılmayan hesaplar: Hiç eşleşmemiş yeni hesaplar son kullanımdan 30 gün, bir çiftten ayrılıp tek kalan hesaplar 60 gün sonra silinir; silmeden yaklaşık 7 gün ve 1 gün önce bildirim gönderilir. Aktif aboneliği olan hesaplar silinmez (abonelik bittikten 60 gün sonra silinir). Eşleşmiş hesaplar bu nedenle silinmez.\n\n" +
       "Hesabınızı silmek mağazadaki (Apple/Google) aboneliğinizi iptal etmez; aboneliği mağaza hesabınızdan ayrıca iptal etmelisiniz.\n\n" +
       "Abonelik sona erdiğinde de kendi içeriğinizi silme hakkınız Premium'a bağlı değildir: kendi yüklediğiniz fotoğrafları, özel günleri ve anı gezegenlerini Premium olmadan da silebilir, mektuplar için silme isteği gönderebilirsiniz (mektuplarda partner onaylı silme kuralları geçerlidir). Premium sona erdiğinde yıldız 14 günlük Kış Uykusuna geçer; 14 gün sonunda yenilenmezse yıldız koordinatı serbest bırakılır ve anı gezegenleri ile hatıralar 90 gün boyunca kasada (Vault) saklanır. Kasa süresi de yenilenmeden dolarsa tam boy fotoğraf dosyaları ve profil fotoğrafları depolama sunucularından silinir; fotoğrafların küçük önizlemeleri ve metin kayıtları korunur. Tasfiye tarihi uygulamada Profil > Premium ekranında gösterilir. Partneriniz hesabını silerse yıldız ve gezegenler bu sürece girmeden silinir.",
@@ -152,14 +155,15 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
     id: "terms",
     title: "Kullanım Koşulları (EULA)",
     badge: "Kullanıcı Sözleşmesi",
-    lastUpdated: "7 Kasım 2026",
+    lastUpdated: "9 Kasım 2026",
     summary: "Uygulamayı kullanırken uyulması gereken genel kurallar, hesap güvenliği, çift eşleşmesi ve sorumluluk sınırları.",
     content: [
       "1. SÖZLEŞMENİN KABULÜ",
       "CoupleSky mobil uygulamasını indirerek, hesap oluşturarak veya kullanarak işbu Kullanım Koşulları'nı (\"Sözleşme\") kabul etmiş sayılırsınız. Bu koşulları kabul etmiyorsanız lütfen uygulamayı kullanmayınız.",
 
       "2. HİZMETİN KAPSAMI VE ÇİFT EŞLEŞMESİ",
-      "CoupleSky, iki kullanıcının özel bir kod (\"Eşleşme Kodu\") aracılığıyla birbirine bağlanarak ortak anı, takvim, fotoğraf, döngü takibi ve zaman kilitli mektuplar paylaşmasını sağlayan bir platformdur. Eşleşme kodunuzu yalnızca güvendiğiniz partnerinizle paylaşmalısınız. Yeni bir eşleşmede partner yalnızca eşleşme anından sonra kaydedilen içerikleri görür. Çift ilişkisi sona erdiğinde (örneğin partnerinizin hesabını silmesiyle) ortak yıldız ve içindeki gezegenler silinir; kendi oluşturduğunuz içerikler hesabınızda kalır. Tek kalan bir kullanıcı, eşleşme gerektiren özellikleri (fotoğraf, mektup, anı ve yıldız) kullanmak için yeniden eşleşmelidir; Premium'a sahip tek kalan kullanıcı ruh hali, günlük, takvim notu, harita notu ve ilaç/döngü takibini kullanabilir.",
+      "CoupleSky, iki kullanıcının özel bir kod (\"Eşleşme Kodu\") aracılığıyla birbirine bağlanarak ortak anı, takvim, fotoğraf, döngü takibi ve zaman kilitli mektuplar paylaşmasını sağlayan bir platformdur. Eşleşme kodunuzu yalnızca güvendiğiniz partnerinizle paylaşmalısınız.\n\n" +
+      "Yeni bir eşleşmede partner yalnızca eşleşme anından sonra kaydedilen içerikleri görür. Çift ilişkisi sona erdiğinde (örneğin partnerinizin hesabını silmesiyle) ortak yıldız ve içindeki gezegenler silinir; kendi oluşturduğunuz içerikler hesabınızda kalır. Tek kalan bir kullanıcı, eşleşme gerektiren özellikleri (fotoğraf, mektup, anı, buluşma ve yıldız) kullanmak için yeniden eşleşmelidir; Premium'a sahip tek kalan kullanıcı ruh hali, günlük, takvim notu, harita notu ve ilaç/döngü takibini kullanabilir.",
 
       "3. HESAP GÜVENLİĞİ VE ŞİFRELER",
       "Kullanıcı, hesap şifresinin gizliliğini korumaktan bizzat sorumludur. Hesabınız altında gerçekleşen tüm faaliyetler sizin sorumluluğunuzdadır. Yetkisiz bir giriş fark ettiğinizde derhal şifrenizi sıfırlamalı veya bizimle iletişime geçmelisiniz. Hesabınızı silmeniz mağaza aboneliğinizi iptal etmez; aboneliği mağazadan iptal etmekten siz sorumlusunuz.",
@@ -173,10 +177,10 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
       "• Otomatik botlar veya scriptler ile veri çekmek (scraping).",
 
       "5. FİKRİ MÜLKİYET HAKLARI",
-      "Uygulamanın tasarımı, logoları, kodları, arayüz unsurları ve marka hakları Veri Sorumlusuna aittir. Yüklediğiniz fotoğrafların ve anıların telif hakları size aittir; ancak uygulamanın çalışması için gerekli teknik lisansı vermiş sayılırsınız. Gökyüzü haritasındaki gerçek yıldızların konum, parlaklık ve tür bilgileri HYG Veritabanı'ndan (Hipparcos, Yale Parlak Yıldız Kataloğu ve Gliese; https://www.astronexus.com/projects/hyg) alınmıştır. Bu veri Creative Commons Atıf-AynıLisanslaPaylaş 4.0 (CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/) lisansıyla sunulur; uygulamada seçilip dönüştürülerek kullanılmıştır.",
+      "Uygulamanın tasarımı, logoları, kodları, arayüz unsurları ve marka hakları Veri Sorumlusuna aittir. Yüklediğiniz fotoğrafların ve anıların telif hakları size aittir; ancak uygulamanın çalışması için gerekli teknik lisansı vermiş sayılırsınız. Gökyüzü haritasındaki gerçek yıldızların konum, parlaklık ve tür bilgileri HYG Veritabanı'ndan (Hipparcos, Yale Parlak Yıldız Kataloğu ve Gliese; https://www.astronexus.com/projects/hyg) alınmıştır. Bu veri Creative Commons Atıf-AynıLisanslaPaylaş 4.0 (CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/) lisansıyla sunulur; uygulamada seçilip dönüştürülerek kullanılmıştır. Gökyüzü posterindeki yıldız verisi HYG Database v4.2'den (CC BY-SA 4.0, https://codeberg.org/astronexus/hyg), takımyıldızı çizgileri Stellarium western sky culture verisinden (CC BY-SA, sürüm belirtilmemiş, https://github.com/Stellarium/stellarium-skycultures) alınmıştır; bu veri dosyaları süzülüp yuvarlanarak değiştirilmiş olup aynı lisansla sunulur.",
 
       "6. HİZMET KESİNTİLERİ VE SORUMLULUK REDDİ",
-      "Uygulama 'olduğu gibi' ve 'mevcut haliyle' sunulmaktadır. Mücbir sebepler, internet altyapı arızaları veya bakım çalışmaları nedeniyle yaşanabilecek geçici kesintilerden doğrudan veya dolaylı maddi/manevi zararlardan Veri Sorumlusu sorumlu tutulamaz.",
+      "Uygulama 'olduğu gibi' ve 'mevcut haliyle' sunulmaktadır. Mücbir sebepler, internet altyapı arızaları veya bakım çalışmaları nedeniyle yaşanabilecek geçici kesintilerden doğrudan veya dolaylı maddi/manevi zararlardan Veri Sorumlusu sorumlu tutulamaz. Uygulamadaki yıldızlar, çiftlere özel sembolik bir uygulama içi deneyimdir; astronomik bir kuruluşun resmi yıldız adlandırması veya bir gök cismi üzerinde mülkiyet/sahiplik hakkı doğurmaz. Gökyüzü posteri ve yıldız bilgileri eğlence ve bilgilendirme amaçlıdır; konumlar yaklaşık hesaplanır, gözlem veya bilimsel kullanım için doğruluk garantisi verilmez.",
 
       "7. FESİH VE ASKIYA ALMA",
       "İşbu koşullara aykırı hareket eden kullanıcıların hesapları önceden bildirim yapılmaksızın askıya alınabilir veya kalıcı olarak sonlandırılabilir.\n\n" +
@@ -199,7 +203,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
     id: "consent",
     title: "Açık Rıza Metni",
     badge: "Özel Nitelikli Veri",
-    lastUpdated: "7 Kasım 2026",
+    lastUpdated: "9 Kasım 2026",
     summary: "Sağlık (döngü/regl) verileri, hassas konum verileri ve bildirim süreçlerine ilişkin açık rıza beyanı.",
     content: [
       "1. AÇIK RIZANIN KAPSAMI VE NİTELİĞİ",
@@ -220,7 +224,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
     id: "subscription",
     title: "Abonelik ve İade Koşulları",
     badge: "App Store & Play Store",
-    lastUpdated: "7 Kasım 2026",
+    lastUpdated: "9 Kasım 2026",
     summary: "Premium abonelik, ücretsiz deneme (tanımlıysa), otomatik yenileme, iptal prosedürü ve iade şartları.",
     content: [
       "1. COUPLES PREMIUM ABONELİĞİ VE KAPSAMI",
@@ -261,8 +265,7 @@ export const LEGAL_DOCS_TR: Record<LegalDocType, LegalDocument> = {
       "• 14 Günlük Kış Uykusu (Grace Period): Çifte yenilemesi için hakkın bittiği andan itibaren 14 gün süre tanınır. Bu sürede hiçbir şey silinmez; gökkubbedeki yıldız koordinatı çifte ait kalır ve gökyüzünden izlenebilir. Ancak yıldız sönük görünür, yıldızın içi (anı gezegenleri) açılmaz, arkadaş çiftlerle ışık bağları gökyüzünde gösterilmez ve yeni bağ kurulamaz, yıldızın adı değiştirilemez. Bağ kayıtları silinmez; abonelik yenilenirse her şey olduğu gibi döner.\n" +
       "• İçerik Erişim ve İşlem Hakları: Premium bittiğinde geçmiş fotoğraflar (tam boy dahil), özel günler, mektuplar, aşk haritasındaki fotoğraf, not ve buluşmalar görüntülenmeye devam eder. Yeni fotoğraf yüklenemez; özel günlerin başlığı, açıklaması ve tarihi düzenlenebilir ancak Premium iken yüklenmiş özel gün fotoğrafı değiştirilemez; yeni özel gün yalnızca fotoğrafsız eklenebilir; mektup Premium olmadan yalnızca jetonla gönderilebilir. Profil fotoğrafları uygulamada gösterilmez, döngü takvimini partner olarak görüntüleme kapanır, anı gezegenlerinin ve yıldızın düzenlenmesi kilitlenir. İsimlerin yıldızda görünürlüğü ayarı ise değiştirilebilir. Kendi yüklediğiniz fotoğrafları, özel günleri ve anı gezegenlerini silme hakkınız ile mektuplar için silme isteği gönderme hakkınız Premium'a bağlı değildir.\n" +
       "• 14 Günün Sonu (Koordinatın Boşa Çıkması & Kasa): 14 gün içinde yenilenmezse yıldızın gökkubbedeki koordinatı serbest bırakılır ve diğer çiftlerin tesciline açılır; ışıltı skoru, kıvılcımlar ve yıldız bağları sıfırlanır. Çiftin anı gezegenleri ve hatıraları silinmez, 90 gün boyunca sistem kasasında (Vault) saklanır. Bu sürede yeniden abone olunup bir yıldız sahiplenilirse (eski yıldız hâlâ boştaysa o da seçilebilir) anı gezegenleri kayıpsız olarak o yıldıza aktarılır.\n" +
-      "• Kasa Süresinin Sonu (Depolama Tasfiyesi): Kasa süresi de yenilenmeden dolarsa tam boy fotoğraf dosyaları, anı ve gezegen görselleri ile profil fotoğrafları kalıcı olarak silinir. Fotoğraf arşivinde her fotoğrafın küçük önizlemesi kalır ve tam boy görselin yerine gösterilir; küçük önizlemesi olmayan fotoğraf kaydı silinir. Metin kayıtları korunur. Kalan süreler ve tasfiye tarihi uygulamada Profil > Premium ekranında gösterilir. Tasfiyeden yaklaşık 7 gün ve 1 gün önce ayrıca uygulama bildirimi gönderilir (bildirimleri kapattıysanız ulaşmayabilir).\n\n" +
-      "• Partnerinizin hesabını silmesi nedeniyle çift dağılırsa yıldız ve gezegenler kış uykusu/kasa süreci beklenmeden silinir; kasada saklanmaz.",
+      "• Kasa Süresinin Sonu (Depolama Tasfiyesi): Kasa süresi de yenilenmeden dolarsa tam boy fotoğraf dosyaları, anı ve gezegen görselleri ile profil fotoğrafları kalıcı olarak silinir. Fotoğraf arşivinde her fotoğrafın küçük önizlemesi kalır ve tam boy görselin yerine gösterilir; küçük önizlemesi olmayan fotoğraf kaydı silinir. Metin kayıtları korunur. Kalan süreler ve tasfiye tarihi uygulamada Profil > Premium ekranında gösterilir. Tasfiyeden yaklaşık 7 gün ve 1 gün önce ayrıca uygulama bildirimi gönderilir (bildirimleri kapattıysanız ulaşmayabilir). Partnerinizin hesabını silmesi nedeniyle çift dağılırsa yıldız ve gezegenler kış uykusu/kasa süreci beklenmeden silinir; kasada saklanmaz.",
 
       "8. ARKADAŞ ÇİFT DAVETİ (HEDİYE PREMIUM)",
       "Eşleşmiş her çiftin bir davet kodu vardır (Profil > Çift Arkadaşlarımızı Davet Et). Koşullar:\n" +
@@ -280,7 +283,7 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
     id: "kvkk",
     title: "Personal Data Protection & GDPR Clarification Text",
     badge: "GDPR & KVKK Compliant",
-    lastUpdated: "November 7, 2026",
+    lastUpdated: "November 9, 2026",
     summary: "Information on the processing purposes, collection methods, legal grounds of your personal data, and your rights under GDPR and Article 11 of Turkish Law No. 6698 (KVKK).",
     content: [
       "1. DATA CONTROLLER",
@@ -291,23 +294,23 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
       "• Identity and Contact Information: Full name, username, email address, gender selection.\n" +
       "• Couple and Relationship Information: Pairing code, first meeting date, relationship anniversary dates. When a relationship ends (for example when your partner deletes their account), the meeting and relationship dates are reset and entered again in a new pairing.\n" +
       "• Visual and Audio Records: Photos uploaded to the shared gallery or private journals, memory pictures, and profile avatars.\n" +
-      "• Location Information: Meeting point coordinates and optional GPS pins attached to memory photos.\n" +
+      "• Location Information: Meeting point coordinates and optional GPS pins attached to memory photos. For the sky poster feature, the place, date and time you choose are used only on your device to compute the poster; coordinates are not stored and are not sent to our servers. The place name (district/city level), time and title are kept on your device, deleted when you sign out, and may be included in device backups.\n" +
       "• Special Category Personal Data (Health Information): Menstrual cycle start dates, predicted cycle intervals, daily medication/vitamin hours and adherence logs.\n" +
       "• Messaging and Memory Content: Time-capsule letters, private daily notes, and mood selections (stored encrypted on our servers).\n" +
       "• Transaction and Financial Information: Anonymous transaction identifiers, subscription status, package type, and token balance processed via RevenueCat and app stores (App Store / Google Play).\n" +
-      "• Device and Operation Security: Device model, OS version, push notification tokens, unique device identifier (UUID), last login timestamp and last app usage time, security logs and IP address used to rate-limit sign-in / password-reset attempts (kept for at most 1 day).\n" +
+      "• Device and Operation Security: Device model, OS version, push notification tokens, unique device identifier (UUID), last sign-in and last app usage time, security logs, and IP address used to rate-limit sign-in / password-reset attempts (kept for at most 1 day).\n" +
       "• Error Logs: When the app errors, the error message, technical stack trace, app version, platform (iOS/Android) and your account identifier. Content such as letters or journal entries is not written to these logs; they are kept for at most 30 days.\n" +
       "• Advertising Data: Advertising identifiers and ad interaction data processed by Google AdMob for the rewarded ads shown in the app (limited to non-personalized ad requests). The app does not track you across other apps and websites, and no tracking permission (ATT) is requested.",
 
       "3. PURPOSES OF PROCESSING PERSONAL DATA",
       "Your personal data is processed in accordance with applicable data protection principles for the following purposes:\n" +
       "• Account creation, secure authentication, and prevention of unauthorized access,\n" +
-      "• Connecting two partners via a unique private pairing code to enable real-time synchronized sharing of memory and calendar content saved after the pairing moment,\n" +
+      "• Linking two partners with a private pairing code and sharing the memory/calendar content saved after the pairing moment,\n" +
+      "• Deleting unused, unpaired accounts after a set period (storage limitation) and sending a notice before deletion,\n" +
       "• Cryptographic encryption of time-locked letters and preserving their confidentiality until the chosen unlock date,\n" +
       "• Displaying shared date locations on map with convenient routing,\n" +
       "• Delivering timely push notifications for medicine schedules, cycle updates, anniversaries, and unlocked letters,\n" +
       "• Provisioning CoupleSky Premium entitlements so that a single subscription covers both partners,\n" +
-      "• Deleting unused, unpaired accounts after a set period (storage limitation) and sending a notice before deletion,\n" +
       "• Maintaining network and information security against cyber attacks and brute-force attempts.",
 
       "4. PARTIES TO WHOM PERSONAL DATA IS TRANSFERRED",
@@ -316,7 +319,7 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
       "• RevenueCat Inc.: In-app purchases, subscription entitlement verification, and receipt validation,\n" +
       "• Google Cloud / Firebase, Apple (APNs) & Expo Notifications: Delivery of push notifications to your device (notification text may include health details such as medicine name or cycle status that your partner shares, and passes through these services),\n" +
       "• Google LLC (AdMob & Google Maps): Map services and non-personalized advertising,\n" +
-      "• Apple Inc. & Google LLC: Sign in with Apple and Sign in with Google authentication services; on-device address search (the address text you type when choosing a location),\n" +
+      "• Apple Inc. & Google LLC: Sign in with Apple and Sign in with Google authentication services; on-device address search and address lookup (the address text you type and the coordinates of the point you pick on the map),\n" +
       "• Expo (Expo Updates / EAS): Distribution of app updates; your IP address, platform and app version are sent when checking for updates,\n" +
       "• OpenStreetMap Foundation (Nominatim): Used as a fallback when the device's own address search returns nothing; only the text you type in the address search box and your IP address are sent,\n" +
       "• Unsplash: Sample images shown in explore (demo) mode; your IP address is visible while the images load,\n" +
@@ -333,10 +336,10 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
       "CoupleSky writes your daily notes and letters to the database encrypted with AES-256. The encryption key is derived inside the app from a random, couple-specific value kept on the server. This is therefore not end-to-end encryption: as the party operating the service we are technically able to access this content, and we do not use it for any other purpose, including marketing. Access is limited by Row-Level Security (RLS) rules to authenticated members of the relevant couple. Your shared photos are kept in private storage and displayed only through time-limited, signed links; your profile photo (avatar), however, is kept in public storage at an unguessable address and can be viewed by anyone who has that address. All traffic is encrypted with TLS.",
 
       "7. DATA RETENTION AND DELETION (RIGHT TO BE FORGOTTEN)",
-      "You can request permanent account deletion anytime from Profile > Account Management & Danger Zone. The request waits 7 days; signing in with the same account during this period cancels the request automatically and you are informed. A reminder notification is sent 3 days and 1 day before the deletion day so you can still cancel. After 7 days everything you created, uploaded or wrote (profile details, photos, journals, letters, notes, special days, map pins, medicine and cycle records and content in your star) is permanently and irreversibly purged from our servers. Your partner's account is not deleted; content your partner created remains available only to your partner. The shared star and the memory planets inside it are deleted regardless of who created them; automatically created anniversary entries are also deleted. Your partner's pairing code is renewed so your partner can pair again. Your partner is informed in the app and by notification about the request, reminders 3 days and 1 day before deletion, withdrawal and deletion. If both sides requested deletion, each account is deleted on its own 7th day; with the last account, everything remaining that belongs to the couple is permanently deleted. Backups are destroyed automatically within 30 days at the latest.\n\n" +
+      "You can request deletion of your account in Profile > Account Management & Danger Zone. The request waits 7 days; signing in with the same account during this period cancels the request automatically and you are informed. A reminder notification is sent 3 days and 1 day before the deletion day so you can still cancel. After 7 days everything you created, uploaded or wrote (profile details, photos, journals, letters, notes, special days, map pins, medicine and cycle records and content in your star) is permanently deleted from our servers. Your partner's account is not deleted; content your partner created remains available only to your partner. The shared star and the memory planets inside it are deleted regardless of who created them; automatically created anniversary entries are also deleted. Your partner's pairing code is renewed so your partner can pair again. Your partner is informed in the app and by notification about the request, reminders 3 days and 1 day before deletion, withdrawal and deletion. If both sides requested deletion, each account is deleted on its own 7th day; with the last account, everything remaining that belongs to the couple is permanently deleted. Backups are destroyed automatically within 30 days at the latest.\n\n" +
       "Under GDPR Article 17 and applicable data protection legislation, the statutory right to delete your personal data, uploaded photos, and letters cannot be conditioned upon an active paid subscription. Users may permanently delete their own content or terminate their accounts at any time, even on the free tier (for letters already delivered to the partner, the partner-approved deletion rules apply).\n\n" +
       "Retention periods:\n" +
-      "• Account, profile and content: until your account is deleted (deleted 7 days after the request). Content created by your partner remains your partner's for as long as their account continues, even if you delete yours,\n" +
+      "• Account, profile and content: until your account is deleted (deleted 7 days after the request). Content your partner created belongs to your partner as long as their account exists, even if you delete yours,\n" +
       "• Unused accounts: New accounts that never paired are deleted 30 days after last use; accounts left alone after a couple ended are deleted 60 days after last use. Accounts with an active subscription are not deleted; they are deleted 60 days after the subscription ends. Paired accounts are never deleted for this reason. A notification is sent about 7 days and 1 day before deletion (it may not reach you if notifications are off),\n" +
       "• Earlier data and new partners: In a new pairing your new partner only sees data saved after the pairing moment; data from your earlier relationship is not shown to your new partner and stays only in your access (you can delete it any time),\n" +
       "• Star registration and coordinate: retained for the couple during a 14-day Stellar Hibernation (Grace Period) following subscription expiration; if not renewed within 14 days, the coordinate is released to the public catalog for other couples to claim. If your partner deletes their account, the star and the memory planets inside it are deleted without waiting for the hibernation/vault period,\n" +
@@ -346,7 +349,7 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
       "• Sign-in and password-reset attempt records (including IP address): at most 1 day,\n" +
       "• Records that prevent duplicate notifications: 14 days,\n" +
       "• In-app account notices shown to your partner: 30 days after they are seen,\n" +
-      "• Push notification token: for the life of your session and account,\n" +
+      "• Push notification token: for the life of your session and account (after a deletion request, only until the deletion day, for the deletion reminder),\n" +
       "• Records held by third-party providers (e.g. RevenueCat, Expo, Google): subject to the provider's own retention policies.",
 
       "8. YOUR RIGHTS UNDER GDPR AND DATA PROTECTION LAWS",
@@ -368,7 +371,7 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
     id: "privacy",
     title: "Privacy Policy",
     badge: "Privacy Policy",
-    lastUpdated: "November 7, 2026",
+    lastUpdated: "November 9, 2026",
     summary: "Detailed guidelines on our data collection, processing, and protection principles, and how your couple privacy is strictly preserved.",
     content: [
       "1. INTRODUCTION AND OUR COMMITMENT",
@@ -377,10 +380,10 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
       "2. COLLECTED INFORMATION AND USAGE SCOPE",
       "• Account Data: Name, username, email address, and securely hashed passwords provided during sign up.\n" +
       "• Relationship Content: Photos, captions, time-capsule letters, and calendar notes. This content is exclusively accessible to you and your paired partner. In a new pairing your partner only sees content saved after the pairing moment; content from an earlier relationship is not shown to your new partner.\n" +
-      "• Usage Time: The last time your account was used. Kept only so unused, unpaired accounts can be deleted (Section 5).\n" +
       "• Stars (Sky): Your star's name and your couple's initials are visible to other users and to visitors trying the app without an account. Your first name is shown only to couples you have a star bond with and, if you explicitly allow it under Certificate > Our Names & Photos, to everyone. Your profile photo (Premium) is shown on your star card to everyone only if you separately allow it in the same section; it is no longer shown when Premium ends or when you remove the photo. Each person gives their own consent (your partner cannot turn it on for you), and you can turn it off at any time. Your last name, username, and email address are never shown. Inappropriate star names, names, and photos can be reported in the app.\n" +
       "• Cycle and Health Data: Menstrual start dates and medication hours. Used solely to provide cycle predictions and timely reminders for you and your partner.\n" +
-      "• Location Coordinates: Obtained only when you explicitly select a meeting point on the map or geotag a photo; no persistent background tracking is ever conducted.\n" +
+      "• Location Coordinates: Obtained only when you explicitly select a meeting point on the map or geotag a photo; no persistent background tracking is ever conducted. For the sky poster, the place and time you choose are processed only on your device to compute the poster; coordinates are not stored and are not sent to our servers, and the place name (district/city level), time and title are kept on your device and deleted when you sign out. To find the address of a point you pick on the map, its coordinates are sent to your device's address service (Apple/Google).\n" +
+      "• Usage time: The last time your account was used. Kept only so unused, unpaired accounts can be deleted (Section 5).\n" +
       "• Error and Security Logs: When the app errors, the error message, technical stack trace, app version and platform (at most 30 days); IP address used to rate-limit sign-in attempts (at most 1 day). Your content is not written to these logs.\n" +
       "• Third-Party Infrastructure: Google AdMob, Google Maps, Apple/Google Sign-In, Supabase, RevenueCat, Expo (notifications and app updates), OpenStreetMap Nominatim (fallback address search) and Unsplash (sample images in explore mode). For details and information on transfers abroad, refer to Section 4 of our Clarification Text.",
 
@@ -391,9 +394,9 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
       "To prevent brute-force attacks and unauthorized multi-device logins, a randomly generated UUID device identifier is utilized. When logging in from an unrecognized device, one-time verification is prompted to safeguard your account. In the friend invite program, the device identifiers of the inviting and invited couples are compared on our server to stop rewards being earned with accounts created on the same device; this comparison is not used for any other purpose.",
 
       "5. ACCOUNT ERASURE AND DATA PURGE (GDPR & CCPA COMPLIANT)",
-      "You may request account deletion at any time under Profile > Account Management & Danger Zone. The request waits 7 days; signing in with the same account during this period cancels the request automatically and you are informed. A reminder notification is sent 3 days and 1 day before the deletion day so you can still cancel. After 7 days everything you created, uploaded or wrote (profile details, photos, journals, letters, notes, special days, map pins, medicine and cycle records and content in your star) is permanently and irreversibly purged from our servers. Your partner's account is not deleted; content your partner created remains available only to your partner. The shared star and the memory planets inside it are deleted regardless of who created them; automatically created anniversary entries are also deleted. Your partner's pairing code is renewed so your partner can pair again. Your partner is informed in the app and by notification about the request, reminders 3 days and 1 day before deletion, withdrawal and deletion. If both sides requested deletion, each account is deleted on its own 7th day; with the last account, everything remaining that belongs to the couple is permanently deleted.\n\n" +
+      "You can request deletion of your account in Profile > Account Management & Danger Zone. The request waits 7 days; signing in with the same account during this period cancels the request automatically and you are informed. A reminder notification is sent 3 days and 1 day before the deletion day so you can still cancel. After 7 days everything you created, uploaded or wrote (profile details, photos, journals, letters, notes, special days, map pins, medicine and cycle records and content in your star) is permanently deleted from our servers. Your partner's account is not deleted; content your partner created remains available only to your partner. The shared star and the memory planets inside it are deleted regardless of who created them; automatically created anniversary entries are also deleted. Your partner's pairing code is renewed so your partner can pair again. Your partner is informed in the app and by notification about the request, reminders 3 days and 1 day before deletion, withdrawal and deletion. If both sides requested deletion, each account is deleted on its own 7th day; with the last account, everything remaining that belongs to the couple is permanently deleted. Backups are destroyed automatically within 30 days at the latest.\n\n" +
       "Unused accounts: New accounts that never paired are deleted 30 days after last use; accounts left alone after a couple ended are deleted 60 days after last use. Accounts with an active subscription are not deleted; they are deleted 60 days after the subscription ends. Paired accounts are never deleted for this reason. A notification is sent about 7 days and 1 day before deletion (it may not reach you if notifications are off).\n\n" +
-      "Deleting your account does not cancel your Apple/Google subscription; cancel it separately in your store account.\n\n" +
+      "Deleting your account does not cancel your Apple/Google subscription; cancel it separately in the store account.\n\n" +
       "Your right to delete your own content does not depend on Premium, including after your subscription ends: you can delete the photos, special days and memory planets you added without Premium and send deletion requests for letters (the partner-approved deletion rules for letters apply). When Premium ends, the star enters a 14-day Stellar Hibernation; if not renewed, the star coordinate is released and memory planets and memories are kept in the vault for 90 days. If the vault period also ends without renewal, full-size photo files and profile photos are deleted from storage; small photo previews and text records are kept. The purge date is shown in the app under Profile > Premium. If your partner deletes their account, the star and planets are deleted without entering this process.",
 
       "6. AGE RESTRICTION",
@@ -408,14 +411,15 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
     id: "terms",
     title: "Terms of Use (EULA)",
     badge: "User Agreement",
-    lastUpdated: "November 7, 2026",
+    lastUpdated: "November 9, 2026",
     summary: "General rules, account safety, couple pairing mechanisms, intellectual property, and limitations of liability.",
     content: [
       "1. ACCEPTANCE OF TERMS",
       "By downloading, installing, registering, or using CoupleSky, you agree to be bound by these Terms of Use (\"Agreement\"). If you do not accept all terms contained herein, do not use the application.",
 
       "2. SERVICE SCOPE AND COUPLE PAIRING",
-      "CoupleSky provides a private platform enabling two partners to connect via a unique pairing code to share memories, calendars, photographs, health tracking, and time-capsule letters. You must only share your pairing code with your trusted partner. In a new pairing the partner only sees content saved after the pairing moment. When a couple's relationship ends (for example your partner deletes their account), the shared star and its planets are deleted and content you created stays in your account. A user left alone must pair again to use features that need a pairing (photos, letters, memories and star); a user left alone with Premium can use mood, journal, calendar notes, map notes and medicine/cycle tracking.",
+      "CoupleSky provides a private platform enabling two partners to connect via a unique pairing code to share memories, calendars, photographs, health tracking, and time-capsule letters. You must only share your pairing code with your trusted partner.\n\n" +
+      "In a new pairing the partner only sees content saved after the pairing moment. When a couple's relationship ends (for example your partner deletes their account), the shared star and its planets are deleted and content you created stays in your account. A user left alone must pair again to use features that need a pairing (photos, letters, memories, meetups and star); a user left alone with Premium can use mood, journal, calendar notes, map notes and medicine/cycle tracking.",
 
       "3. ACCOUNT CREDENTIALS AND SECURITY",
       "You are solely responsible for maintaining the confidentiality of your login credentials. You accept responsibility for all activities that occur under your account. If you suspect unauthorized access, reset your password immediately or contact our support team. Deleting your account does not cancel your store subscription; you are responsible for cancelling it in the store.",
@@ -429,10 +433,10 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
       "• Deploy automated scrapers, crawlers, or bots to harvest data.",
 
       "5. INTELLECTUAL PROPERTY RIGHTS",
-      "The application UI, designs, logos, artwork, and software code are owned exclusively by the Data Controller. You retain ownership of all photographs and text memories you upload, while granting the necessary technical license required to render the service. The positions, brightness and types of the real stars on the sky map come from the HYG Database (Hipparcos, Yale Bright Star and Gliese catalogs; https://www.astronexus.com/projects/hyg), provided under the Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/); the data was selected and converted for use in the app.",
+      "The application UI, designs, logos, artwork, and software code are owned exclusively by the Data Controller. You retain ownership of all photographs and text memories you upload, while granting the necessary technical license required to render the service. The positions, brightness and types of the real stars on the sky map come from the HYG Database (Hipparcos, Yale Bright Star and Gliese catalogs; https://www.astronexus.com/projects/hyg), provided under the Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/); the data was selected and converted for use in the app. The star data on the sky poster comes from HYG Database v4.2 (CC BY-SA 4.0, https://codeberg.org/astronexus/hyg) and the constellation lines from the Stellarium western sky culture (CC BY-SA, version not specified, https://github.com/Stellarium/stellarium-skycultures); these data files have been modified (filtered and rounded) and remain under the same license.",
 
       "6. SERVICE AVAILABILITY AND DISCLAIMER OF WARRANTIES",
-      "CoupleSky is provided on an \"AS IS\" and \"AS AVAILABLE\" basis. We cannot guarantee uninterrupted uptime due to maintenance, force majeure events, or network provider disruptions, and disclaim liability for indirect or consequential damages to the extent permitted by law.",
+      "CoupleSky is provided on an \"AS IS\" and \"AS AVAILABLE\" basis. We cannot guarantee uninterrupted uptime due to maintenance, force majeure events, or network provider disruptions, and disclaim liability for indirect or consequential damages to the extent permitted by law. The stars in the app are a symbolic in-app experience for couples; they do not constitute an official star naming by any astronomical organization or any ownership right over a celestial body. The sky poster and star information are for entertainment and information only; positions are computed approximately and no accuracy is guaranteed for observation or scientific use.",
 
       "7. TERMINATION AND SUSPENSION",
       "We reserve the right to suspend or terminate accounts that violate these Terms or present safety risks to other users without prior liability.\n\n" +
@@ -455,7 +459,7 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
     id: "consent",
     title: "Explicit Consent Statement",
     badge: "Special Category Data",
-    lastUpdated: "November 7, 2026",
+    lastUpdated: "November 9, 2026",
     summary: "Declaration of explicit consent regarding health (menstrual cycle / medication) data, sensitive location data, and push notification flows.",
     content: [
       "1. NATURE AND SCOPE OF EXPLICIT CONSENT",
@@ -476,7 +480,7 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
     id: "subscription",
     title: "Subscription & Refund Terms",
     badge: "App Store & Google Play",
-    lastUpdated: "November 7, 2026",
+    lastUpdated: "November 9, 2026",
     summary: "CoupleSky Premium subscription features, free trial duration (if defined), auto-renewal rules, cancellation steps, and statutory refund policies.",
     content: [
       "1. COUPLES PREMIUM SUBSCRIPTION & SHARED COVERAGE",
@@ -517,8 +521,7 @@ export const LEGAL_DOCS_EN: Record<LegalDocType, LegalDocument> = {
       "• 14-Day Stellar Hibernation (Grace Period): The couple gets 14 days from the moment the entitlement ends to renew. Nothing is deleted during this time; the celestial coordinate stays registered to the couple and the star can be watched in the sky. However, the star appears dim, its inner world (memory planets) cannot be opened, light bonds with friends' stars are not drawn in the sky and new bonds cannot be made, and the star's name cannot be changed. Bond records are not deleted; if the subscription is renewed, everything returns as it was.\n" +
       "• Content Access and Action Rights: When Premium ends, existing photos (including full size), special days, letters and the photos, notes and meetups on the love map remain viewable. New photos cannot be uploaded; the title, description and date of special days can still be edited but a photo uploaded while Premium cannot be changed, and new special days can only be added without a photo; without Premium, letters can only be sent with tokens. Profile photos are not shown in the app, viewing the cycle calendar as a partner is closed, and editing memory planets and the star is locked. The setting for showing your names on the star can still be changed. Your right to delete the photos, special days and memory planets you added, and to request deletion of letters, does not depend on Premium.\n" +
       "• End of 14 Days (Coordinate Release & Vault): If not renewed within 14 days, the star's celestial coordinate is released and can be claimed by other couples; the glow score, sparks and star bonds are reset. The couple's memory planets and memories are not deleted; they are kept in the system vault for 90 days. If you subscribe again and claim a star in that time (the old star can be chosen if it is still free), the memory planets move to it unchanged.\n" +
-      "• End of the Vault Period (Storage Purge): If the vault period also ends without renewal, full-size photo files, memory and planet images and profile photos are permanently deleted. Each photo in the archive keeps its small preview, which is shown in place of the full-size image; a photo record without a small preview is deleted. Text records are kept. Remaining time and the purge date are shown in the app under Profile > Premium. An app notification is also sent about 7 days and 1 day before the purge (it may not reach you if notifications are turned off).\n\n" +
-      "• If the couple breaks up because your partner deletes their account, the star and planets are deleted without waiting for hibernation/vault and are not stored in the vault.",
+      "• End of the Vault Period (Storage Purge): If the vault period also ends without renewal, full-size photo files, memory and planet images and profile photos are permanently deleted. Each photo in the archive keeps its small preview, which is shown in place of the full-size image; a photo record without a small preview is deleted. Text records are kept. Remaining time and the purge date are shown in the app under Profile > Premium. An app notification is also sent about 7 days and 1 day before the purge (it may not reach you if notifications are turned off). If the couple breaks up because your partner deletes their account, the star and planets are deleted without waiting for hibernation/vault and are not stored in the vault.",
 
       "8. COUPLE FRIEND INVITES (GIFT PREMIUM)",
       "Every paired couple has an invite code (Profile > Invite Our Couple Friends). Conditions:\n" +
